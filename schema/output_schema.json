@@ -1,0 +1,262 @@
+{
+  "sample.pdf": {
+    "title": "Application form for grant of LTC advance",
+    "outline": [
+      {
+        "level": "H2",
+        "text": "Name of the Government Servant",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Designation",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Date of entering the Central Government",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Service",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "PAY + SI + NPA",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Whether permanent or temporary",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "6. Home Town as recorded in the Service Book",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Whether wife / husband is employed and if",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "so whether entitled to LTC",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Whether the concession is to be availed for",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "visiting home town and if so block for which",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "LTC is to be availed.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "(a) If the concession is to visit anywhere in",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "India, the place to be visited.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "(b) Block for which to be availed.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Single rail fare/bus fare from the",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "headquarters to home town/place of visit by",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "shortest route.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Persons in respect of whom LTC is proposed to be availed.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "S.No Name Age Relationship",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Amount of advance required. Rs.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "I declare that the particulars furnished above are true and correct to the best of my knowledge. I",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "undertake to produce the tickets for the outward journey within ten days of receipt of the advance.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "In the event of cancellation of the journey or if I fail to produce the tickets within ten days of receipt of",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "advance, I undertake to refund the entire advance in one lump sum.",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Date",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Signature of Government Servant.",
+        "page": 1
+      }
+    ]
+  },
+  "sample2.pdf": {
+    "title": "Overview Foundation Level Extensions",
+    "outline": [
+      {
+        "level": "H1",
+        "text": "Overview",
+        "page": 1
+      },
+      {
+        "level": "H1",
+        "text": "Foundation Level Extensions",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "International Software Testing Qualifications Board",
+        "page": 1
+      },
+      {
+        "level": "H3",
+        "text": "Revision History",
+        "page": 3
+      },
+      {
+        "level": "H3",
+        "text": "Table of Contents",
+        "page": 4
+      },
+      {
+        "level": "H3",
+        "text": "Acknowledgements",
+        "page": 5
+      },
+      {
+        "level": "H3",
+        "text": "1. Introduction to the Foundation Level Extensions",
+        "page": 6
+      },
+      {
+        "level": "H3",
+        "text": "2. Introduction to Foundation Level Agile Tester Extension",
+        "page": 7
+      },
+      {
+        "level": "H3",
+        "text": "3. Overview of the Foundation Level Extension–Agile Tester",
+        "page": 10
+      },
+      {
+        "level": "H3",
+        "text": "Syllabus",
+        "page": 10
+      },
+      {
+        "level": "H3",
+        "text": "4. References",
+        "page": 12
+      }
+    ]
+  },
+  "sample3.pdf": {
+    "title": "RFP: RRFP: RRFP: RRFP: Reeeequest fquest fquest fquest foooor Prr Prr Prr Proposaloposaloposaloposal",
+    "outline": [
+      {
+        "level": "H2",
+        "text": "To Present a Proposal for Developing",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "the Business Plan for the Ontario",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "Digital Library",
+        "page": 1
+      },
+      {
+        "level": "H3",
+        "text": "March 21, 2003",
+        "page": 1
+      },
+      {
+        "level": "H3",
+        "text": "Ontario’s Digital Library",
+        "page": 2
+      }
+    ]
+  },
+  "sample4.pdf": {
+    "title": "Parsippany -Troy Hills STEM Pathways",
+    "outline": [
+      {
+        "level": "H2",
+        "text": "Elective Course Offerings",
+        "page": 2
+      },
+      {
+        "level": "H3",
+        "text": "What Colleges Say!",
+        "page": 2
+      }
+    ]
+  },
+  "sample5.pdf": {
+    "title": "HOPE To SEE You THERE!",
+    "outline": [
+      {
+        "level": "H3",
+        "text": "----------------",
+        "page": 1
+      },
+      {
+        "level": "H2",
+        "text": "WWW.TOPJUMP.COM",
+        "page": 1
+      }
+    ]
+  }
+}
