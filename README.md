@@ -1,49 +1,175 @@
-# 📄 PDF Document Structure Extractor – Adobe Hackathon Round 1A
 
-This project is a CPU-only, offline tool designed for Adobe's Round 1A challenge: **"Understand Your Document"**.
 
-It extracts the **document title** and a **structured outline (H1–H4)** from PDFs using layout-aware heuristics, text block parsing, and smart spacing normalization.
+# 📄 **PDF Document Structure Extractor – Adobe Hackathon Round 1A**
 
----
-
-## 🚀 Features
-
-- ✅ Accurate multiline **title** detection (handles stretched/merged letters)
-- ✅ Heading hierarchy extraction: **H1, H2, H3, H4**
-- ✅ Font-size + layout-based detection (no ML inference required)
-- ✅ Output in clean structured **JSON** format
-- ✅ Works offline in under 10s per 50-page document
-- ✅ Fully Dockerized (≤200MB image, linux/amd64)
+This tool is built for Adobe Hackathon **Round 1A: Understand Your Document**.
+It extracts the **document title** and a **structured heading hierarchy (H1–H4)** from PDF files using **layout-aware heuristics**, **font-size analysis**, and **text normalization** — **completely offline** and optimized for CPU-only environments.
 
 ---
 
-## 📂 Project Structure
+## ✅ **Key Features**
 
+* **Multiline Title Detection**
+  Handles stretched or spaced-out letters (e.g., `A p p l i c a t i o n → Application`).
+
+* **Heading Outline Extraction**
+  Detects **H1, H2, H3, H4** based on font size and structural patterns.
+
+* **No ML Model Required**
+  Pure heuristic-based approach → lightweight and fast.
+
+* **Performance**
+
+  * CPU-only
+  * Processes a **50-page PDF in under 10s**
+  * Fully **offline**, no internet required
+
+* **Output Format**
+  Clean, structured **JSON** containing:
+
+  * Title
+  * Heading hierarchy with page numbers
+
+* **Dockerized for Submission**
+  Image size ≤ **200MB** (Linux/amd64)
+
+---
+
+## 📂 **Project Structure**
+
+```
 adobe_r1a/
-├── input/ # Input PDFs
-├── output/ # Output JSONs
-├── main.py # Main pipeline script
-├── extractor.py # Optional block-based extractor
-├── Dockerfile # Build for offline CPU-only Docker image
+├── input/                  # Input PDFs
+├── output/                 # Generated JSON outputs
+├── main.py                 # Main pipeline script
+├── extractor.py            # Optional: block-based extraction variant
+├── Dockerfile              # Docker setup for CPU-only runtime
 └── utils/
-├── extract_headings.py # Heuristic heading detector
-├── text_utils.py # Spacing normalizer
-└── title_extractor.py # Multiline title logic
+    ├── extract_headings.py # Heading detection heuristics
+    ├── text_utils.py       # Text normalization helpers
+    └── title_extractor.py  # Multiline title detection logic
+```
 
-Heuristic Logic
-Title is selected from the top of page 1 using:
+---
 
-Largest font size range
+## 🧠 **Heuristic Logic**
 
-Line grouping by Y-position
+### **Title Detection**
 
-Spacing normalization (e.g., A p p l i c a t i o n → Application)
+* Extracted from **top of page 1** using:
 
-Headings (H1–H4) are identified using:
+  * Largest font size range
+  * Line grouping by Y-position
+  * Spacing normalization
+    *(Example: `A p p l i c a t i o n` → `Application`)*
 
-Relative font sizes across pages
+### **Heading Detection (H1–H4)**
 
-Numeric and semantic patterns (e.g., 1., 2.1, 3.1.1)
+* Uses:
 
-Known labels (e.g., "Table of Contents", "Acknowledgements")
+  * **Relative font size hierarchy**
+  * **Numeric patterns** (`1.`, `2.1`, `3.1.1`)
+  * Known semantic labels (`Table of Contents`, `Acknowledgements`)
+
+---
+
+## 🐳 **Docker Setup**
+
+### **Dockerfile**
+
+```dockerfile
+FROM python:3.10-slim
+
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpoppler-cpp-dev \
+    poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
+
+# Copy project code
+COPY . .
+
+# Default command
+CMD ["python", "main.py"]
+```
+
+---
+
+## ▶ **Run Instructions**
+
+### **1. Install Dependencies (Local)**
+
+```bash
+pip install -r requirements.txt
+```
+
+### **2. Process PDFs**
+
+```bash
+python main.py
+```
+
+Outputs JSON files in the `output/` folder.
+
+---
+
+### **Run with Docker**
+
+**Build Image:**
+
+```bash
+docker build -t pdf-structure-extractor .
+```
+
+**Run Container:**
+
+```bash
+docker run --rm -v $(pwd):/app pdf-structure-extractor
+```
+
+---
+
+## ✅ **Expected Output Example**
+
+```json
+{
+  "title": "Understanding Digital Libraries",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Introduction",
+      "page_number": 1
+    },
+    {
+      "level": "H2",
+      "text": "Background",
+      "page_number": 2
+    }
+  ]
+}
+```
+
+---
+
+## 🔮 **Future Enhancements**
+
+✔ Smarter detection for **rotated/scanned PDFs**
+✔ Support for **multilingual documents**
+✔ Visualization of extracted outline in **HTML**
+
+---
+
+**Author:** Riddhi Sharma
+**Hackathon:** Adobe India – Understand Your Document (Round 1A)
+
+
+
 
