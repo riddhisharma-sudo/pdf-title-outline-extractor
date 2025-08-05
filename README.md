@@ -1,13 +1,13 @@
 
 
-# 📄 **PDF Document Structure Extractor – Adobe Hackathon Round 1A**
+#  **PDF Document Structure Extractor – Adobe Hackathon Round 1A**
 
 This tool is built for Adobe Hackathon **Round 1A: Understand Your Document**.
 It extracts the **document title** and a **structured heading hierarchy (H1–H4)** from PDF files using **layout-aware heuristics**, **font-size analysis**, and **text normalization** — **completely offline** and optimized for CPU-only environments.
 
 ---
 
-## ✅ **Key Features**
+##  **Key Features**
 
 * **Multiline Title Detection**
   Handles stretched or spaced-out letters (e.g., `A p p l i c a t i o n → Application`).
@@ -35,7 +35,7 @@ It extracts the **document title** and a **structured heading hierarchy (H1–H4
 
 ---
 
-## 📂 **Project Structure**
+##  **Project Structure**
 
 ```
 adobe_r1a/
@@ -52,7 +52,7 @@ adobe_r1a/
 
 ---
 
-## 🧠 **Heuristic Logic**
+##  **Heuristic Logic**
 
 ### **Title Detection**
 
@@ -73,7 +73,7 @@ adobe_r1a/
 
 ---
 
-## 🐳 **Docker Setup**
+##  **Docker Setup**
 
 ### **Dockerfile**
 
@@ -103,7 +103,7 @@ CMD ["python", "main.py"]
 
 ---
 
-## ▶ **Run Instructions**
+##  **Run Instructions**
 
 ### **1. Install Dependencies (Local)**
 
@@ -137,7 +137,7 @@ docker run --rm -v $(pwd):/app pdf-structure-extractor
 
 ---
 
-## ✅ **Expected Output Example**
+##  **Expected Output Example**
 
 ```json
 {
@@ -159,7 +159,7 @@ docker run --rm -v $(pwd):/app pdf-structure-extractor
 
 ---
 
-## 🔮 **Future Enhancements**
+##  **Future Enhancements**
 
 ✔ Smarter detection for **rotated/scanned PDFs**
 ✔ Support for **multilingual documents**
@@ -169,6 +169,7 @@ docker run --rm -v $(pwd):/app pdf-structure-extractor
 
 **Author:** Riddhi Sharma
 **Hackathon:** Adobe India – Understand Your Document (Round 1A)
+
 
 
 
